@@ -305,13 +305,13 @@ def render_timeline():
     for i, event in enumerate(STORY_EVENTS):
         side = "left" if i % 2 == 0 else "right"
         timeline_html += f"""
-        <div class="timeline-container {side}">
-            <div class="timeline-content">
-                <div class="timeline-year">{event['year']} &mdash; {event['title']}</div>
-                <div class="timeline-text">{event['text']}</div>
-            </div>
-        </div>
-        """
+<div class="timeline-container {side}">
+    <div class="timeline-content">
+        <div class="timeline-year">{event['year']} &mdash; {event['title']}</div>
+        <div class="timeline-text">{event['text']}</div>
+    </div>
+</div>
+"""
     timeline_html += "</div>"
     st.markdown(timeline_html, unsafe_allow_html=True)
 
